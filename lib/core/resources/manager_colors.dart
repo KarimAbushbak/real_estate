@@ -7,7 +7,7 @@ class ManagerColors {
   static const Color logInHintTextColor = Color(0xff868889);
   static const Color forgetPasswordColor = Color(0xff407EC7);
 
-  static Color secondaryColor = Colors.brown;
+  static Color secondaryColor = Color(0xff204D6C);
   static Color brown200 = Colors.brown.shade300;
   static Color outBoardingSubTitle = Color(0xff868889);
   static Color peachHomeColor = Color(0xffFFCEC1);

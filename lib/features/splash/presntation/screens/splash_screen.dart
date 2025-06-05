@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:real_estate/core/resources/manager_colors.dart';
 import 'package:real_estate/core/resources/manager_height.dart';
 import 'package:real_estate/core/resources/manager_width.dart';
 import 'package:real_estate/routes/routes.gr.dart';
@@ -40,6 +39,7 @@ class SplashScreen extends StatelessWidget {
           Center(
             child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   width: ManagerWidth.w200,
