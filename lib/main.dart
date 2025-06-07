@@ -1,15 +1,30 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'core/constants.dart';
+import 'features/auth/data/repositories/auth_repository.dart';
+import 'features/auth/presntation/bloc/auth_bloc.dart';
 import 'routes/routes.dart';
 
 
 final _appRouter = AppRouter();
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  runApp(
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => AuthBloc(AuthRepository())),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
