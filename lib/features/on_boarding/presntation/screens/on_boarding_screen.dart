@@ -2,14 +2,11 @@ import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:real_estate/core/resources/manager_assets.dart';
-import 'package:real_estate/core/resources/manager_colors.dart';
-import 'package:real_estate/core/resources/manager_font_sizes.dart';
-import 'package:real_estate/core/resources/manager_font_weight.dart';
 import 'package:real_estate/core/resources/manager_height.dart';
 import 'package:real_estate/core/resources/manager_width.dart';
-import 'package:real_estate/core/widgets/base_button.dart';
 import 'package:auto_route/auto_route.dart';
 
+import '../../../../routes/routes.gr.dart';
 import '../cubit/on_boarding_cubit.dart';
 import '../widgets/on_boarding_widget.dart';
 
@@ -34,7 +31,7 @@ class OnBoardingScreen extends StatelessWidget {
               );
             });
           } else if (state is OnboardingCompleted) {
-            // TODO: Navigate to the next screen after onboarding
+            context.pushRoute(const OptionRoute());
           }
           return Scaffold(
             backgroundColor: Colors.white,

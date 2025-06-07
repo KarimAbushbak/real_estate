@@ -6,6 +6,7 @@ class ManagerColors {
   static const Color primaryColor = Color(0xff8BC83F);
   static const Color logInHintTextColor = Color(0xff868889);
   static const Color forgetPasswordColor = Color(0xff407EC7);
+  static const Color optionBoxColor = Color(0xffF5F4F8);
 
   static Color secondaryColor = Color(0xff204D6C);
   static Color brown200 = Colors.brown.shade300;

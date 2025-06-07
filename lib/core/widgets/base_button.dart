@@ -10,13 +10,13 @@ class BaseButton extends StatelessWidget {
     super.key,
     this.width,
     this.height,
-    this.text,
+    this.child,
     this.onTap,
   });
 
   final double? width;
   final double? height;
-  final String? text;
+  final Widget? child;
   final VoidCallback? onTap;
 
   @override
@@ -33,8 +33,8 @@ class BaseButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
-          child: Text(
-            text ?? 'Lets Start',
+          child: child ?? const Text(
+            'Lets Start',
             style: TextStyle(
               color: Colors.white,
               fontSize: ManagerFontSizes.s18,

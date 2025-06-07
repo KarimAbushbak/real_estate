@@ -84,7 +84,14 @@ class OnBoardingWidget extends StatelessWidget {
                   right: 0,
                   child: Center(
                     child: BaseButton(
-                      text: 'Next',
+                      child: Text('Next',
+                      style: TextStyle(
+                        fontSize: ManagerFontSizes.s16,
+                        fontWeight: ManagerFontWeight.w600,
+                        color: Colors.white,
+
+                      ),
+                        ),
                       onTap: onNext,
                     ),
                   ),

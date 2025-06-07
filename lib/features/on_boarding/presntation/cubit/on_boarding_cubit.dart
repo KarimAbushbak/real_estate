@@ -53,7 +53,6 @@ class OnboardingCubit extends Cubit<OnboardingState> {
       emit(OnboardingPageChanged(currentIndex + 1));
     } else {
       emit(OnboardingCompleted());
-      // TODO: Add navigation logic after completion
     }
   }
 }
