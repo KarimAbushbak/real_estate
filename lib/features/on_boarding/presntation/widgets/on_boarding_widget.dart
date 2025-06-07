@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/resources/manager_assets.dart';
@@ -84,6 +83,7 @@ class OnBoardingWidget extends StatelessWidget {
                   right: 0,
                   child: Center(
                     child: BaseButton(
+                      onTap: onNext,
                       child: Text('Next',
                       style: TextStyle(
                         fontSize: ManagerFontSizes.s16,
@@ -92,7 +92,6 @@ class OnBoardingWidget extends StatelessWidget {
 
                       ),
                         ),
-                      onTap: onNext,
                     ),
                   ),
                 ),
