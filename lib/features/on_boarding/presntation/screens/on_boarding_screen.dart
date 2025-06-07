@@ -30,7 +30,7 @@ class OnBoardingScreen extends StatelessWidget {
               );
             });
           } else if (state is OnboardingCompleted) {
-            context.pushRoute(const OptionRoute());
+            context.pushRoute( OptionRoute());
           }
           return Scaffold(
             backgroundColor: Colors.white,

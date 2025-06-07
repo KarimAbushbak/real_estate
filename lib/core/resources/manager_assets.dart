@@ -11,7 +11,7 @@ class ManagerAssets {
   static const String option3 = 'assets/images/option/option3.png';
   static const String option4 = 'assets/images/option/option4.png';
   static const String facebook = 'assets/images/option/facebook.png';
-  static const String auth1 = 'assets/images/auth/auth1.png';
+  static const String login1 = 'assets/images/log_in/login1.png';
   static const String auth2 = 'assets/images/auth/auth2.png';
   static const String auth3 = 'assets/images/auth/auth3.png';
   static const String auth4 = 'assets/images/auth/auth4.png';

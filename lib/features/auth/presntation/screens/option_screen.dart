@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:real_estate/core/resources/manager_colors.dart';
@@ -9,6 +10,7 @@ import 'package:real_estate/features/auth/presntation/bloc/auth_bloc.dart';
 import '../../../../core/resources/manager_assets.dart';
 import '../../../../core/resources/manager_height.dart';
 import '../../../../core/resources/manager_width.dart';
+import '../../../../routes/routes.gr.dart';
 
 @RoutePage()
 class OptionScreen extends StatelessWidget {
@@ -26,7 +28,7 @@ class OptionScreen extends StatelessWidget {
     return Scaffold(
       body: BlocConsumer<AuthBloc, AuthState>(
         listener: (context, state) {
-          if(state is Authenticated){
+          if (state is Authenticated) {
             // Navigator.pushNamed(context, '/home');
           } else if (state is AuthError) {
             // Handle authentication error
@@ -89,6 +91,10 @@ class OptionScreen extends StatelessWidget {
               BaseButton(
                 width: 278,
                 height: 63,
+                onTap: () {
+                  context.pushRoute(LoginRoute());
+                }
+                ,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -135,7 +141,8 @@ class OptionScreen extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         // Handle Google sign-in
-                        context.read<AuthBloc>().add(AuthGoogleSignInRequested());
+                        context.read<AuthBloc>().add(
+                            AuthGoogleSignInRequested());
                       },
                       child: Container(
                         height: ManagerHeight.h70,
