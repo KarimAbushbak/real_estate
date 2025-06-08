@@ -9,26 +9,28 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i5;
-import 'package:flutter/material.dart' as _i6;
+import 'package:auto_route/auto_route.dart' as _i6;
+import 'package:flutter/material.dart' as _i7;
 import 'package:real_estate/features/auth/presntation/screens/login_screen.dart'
     as _i1;
 import 'package:real_estate/features/auth/presntation/screens/option_screen.dart'
     as _i3;
+import 'package:real_estate/features/auth/presntation/screens/register_screen.dart'
+    as _i4;
 import 'package:real_estate/features/on_boarding/presntation/screens/on_boarding_screen.dart'
     as _i2;
 import 'package:real_estate/features/splash/presntation/screens/splash_screen.dart'
-    as _i4;
+    as _i5;
 
 /// generated route for
 /// [_i1.LoginScreen]
-class LoginRoute extends _i5.PageRouteInfo<void> {
-  const LoginRoute({List<_i5.PageRouteInfo>? children})
+class LoginRoute extends _i6.PageRouteInfo<void> {
+  const LoginRoute({List<_i6.PageRouteInfo>? children})
     : super(LoginRoute.name, initialChildren: children);
 
   static const String name = 'LoginRoute';
 
-  static _i5.PageInfo page = _i5.PageInfo(
+  static _i6.PageInfo page = _i6.PageInfo(
     name,
     builder: (data) {
       return const _i1.LoginScreen();
@@ -38,8 +40,8 @@ class LoginRoute extends _i5.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.OnBoardingScreen]
-class OnBoardingRoute extends _i5.PageRouteInfo<OnBoardingRouteArgs> {
-  OnBoardingRoute({_i6.Key? key, List<_i5.PageRouteInfo>? children})
+class OnBoardingRoute extends _i6.PageRouteInfo<OnBoardingRouteArgs> {
+  OnBoardingRoute({_i7.Key? key, List<_i6.PageRouteInfo>? children})
     : super(
         OnBoardingRoute.name,
         args: OnBoardingRouteArgs(key: key),
@@ -48,7 +50,7 @@ class OnBoardingRoute extends _i5.PageRouteInfo<OnBoardingRouteArgs> {
 
   static const String name = 'OnBoardingRoute';
 
-  static _i5.PageInfo page = _i5.PageInfo(
+  static _i6.PageInfo page = _i6.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<OnBoardingRouteArgs>(
@@ -62,7 +64,7 @@ class OnBoardingRoute extends _i5.PageRouteInfo<OnBoardingRouteArgs> {
 class OnBoardingRouteArgs {
   const OnBoardingRouteArgs({this.key});
 
-  final _i6.Key? key;
+  final _i7.Key? key;
 
   @override
   String toString() {
@@ -82,8 +84,8 @@ class OnBoardingRouteArgs {
 
 /// generated route for
 /// [_i3.OptionScreen]
-class OptionRoute extends _i5.PageRouteInfo<OptionRouteArgs> {
-  OptionRoute({_i6.Key? key, List<_i5.PageRouteInfo>? children})
+class OptionRoute extends _i6.PageRouteInfo<OptionRouteArgs> {
+  OptionRoute({_i7.Key? key, List<_i6.PageRouteInfo>? children})
     : super(
         OptionRoute.name,
         args: OptionRouteArgs(key: key),
@@ -92,7 +94,7 @@ class OptionRoute extends _i5.PageRouteInfo<OptionRouteArgs> {
 
   static const String name = 'OptionRoute';
 
-  static _i5.PageInfo page = _i5.PageInfo(
+  static _i6.PageInfo page = _i6.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<OptionRouteArgs>(
@@ -106,7 +108,7 @@ class OptionRoute extends _i5.PageRouteInfo<OptionRouteArgs> {
 class OptionRouteArgs {
   const OptionRouteArgs({this.key});
 
-  final _i6.Key? key;
+  final _i7.Key? key;
 
   @override
   String toString() {
@@ -125,17 +127,33 @@ class OptionRouteArgs {
 }
 
 /// generated route for
-/// [_i4.SplashScreen]
-class SplashRoute extends _i5.PageRouteInfo<void> {
-  const SplashRoute({List<_i5.PageRouteInfo>? children})
+/// [_i4.RegisterScreen]
+class RegisterRoute extends _i6.PageRouteInfo<void> {
+  const RegisterRoute({List<_i6.PageRouteInfo>? children})
+    : super(RegisterRoute.name, initialChildren: children);
+
+  static const String name = 'RegisterRoute';
+
+  static _i6.PageInfo page = _i6.PageInfo(
+    name,
+    builder: (data) {
+      return const _i4.RegisterScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [_i5.SplashScreen]
+class SplashRoute extends _i6.PageRouteInfo<void> {
+  const SplashRoute({List<_i6.PageRouteInfo>? children})
     : super(SplashRoute.name, initialChildren: children);
 
   static const String name = 'SplashRoute';
 
-  static _i5.PageInfo page = _i5.PageInfo(
+  static _i6.PageInfo page = _i6.PageInfo(
     name,
     builder: (data) {
-      return const _i4.SplashScreen();
+      return const _i5.SplashScreen();
     },
   );
 }

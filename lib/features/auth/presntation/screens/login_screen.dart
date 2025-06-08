@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:real_estate/core/resources/manager_assets.dart';
@@ -8,6 +9,7 @@ import 'package:real_estate/core/resources/manager_font_weight.dart';
 import 'package:real_estate/core/resources/manager_height.dart';
 import 'package:real_estate/core/resources/manager_width.dart';
 
+import '../../../../routes/routes.gr.dart';
 import '../bloc/auth_bloc.dart';
 
 @RoutePage()
@@ -28,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      'Let’s',
+                      'Lets',
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: ManagerFontWeight.regular,
@@ -49,8 +51,8 @@ class LoginScreen extends StatelessWidget {
                 Text(
                   'quis nostrud exercitation ullamco laboris nisi ut',
                   style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: ManagerFontSizes.s12
+                    color: Colors.grey,
+                    fontSize: ManagerFontSizes.s12
                   ),
                 ),
                 SizedBox(height: ManagerHeight.h35,),
@@ -100,7 +102,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                     Text(
+                    Text(
                       'Forgot Password?',
                       style: TextStyle(
                         color: ManagerColors.secondaryColor,
@@ -121,7 +123,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-
 
 
 
@@ -202,7 +203,7 @@ class LoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Don’t have an account?',
+                'Dont have an account?',
                 style: TextStyle(
                   fontSize: ManagerFontSizes.s16,
                   fontWeight: ManagerFontWeight.w400,
@@ -210,6 +211,10 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               InkWell(
+                onTap: (){
+                  context.pushRoute(RegisterRoute());
+
+                },
                 child: Text(
                   ' Register',
                   style: TextStyle(
@@ -228,3 +233,4 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+

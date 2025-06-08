@@ -188,6 +188,9 @@ class OptionScreen extends StatelessWidget {
                     ),
                   ),
                   InkWell(
+                    onTap: (){
+                      context.pushRoute(LoginRoute());
+                    },
                     child: Text(
                       ' Register',
                       style: TextStyle(
