@@ -8,6 +8,7 @@ import 'package:real_estate/core/resources/manager_font_sizes.dart';
 import 'package:real_estate/core/resources/manager_font_weight.dart';
 import 'package:real_estate/core/resources/manager_height.dart';
 import 'package:real_estate/core/resources/manager_width.dart';
+import 'package:real_estate/core/widgets/base_button.dart';
 
 import '../../../../routes/routes.gr.dart';
 import '../bloc/auth_bloc.dart';
@@ -51,8 +52,8 @@ class LoginScreen extends StatelessWidget {
                 Text(
                   'quis nostrud exercitation ullamco laboris nisi ut',
                   style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: ManagerFontSizes.s12
+                      color: Colors.grey,
+                      fontSize: ManagerFontSizes.s12
                   ),
                 ),
                 SizedBox(height: ManagerHeight.h35,),
@@ -131,7 +132,21 @@ class LoginScreen extends StatelessWidget {
             ),
 
           ),
-          SizedBox(height: ManagerHeight.h100,),
+          SizedBox(height: ManagerHeight.h50,),
+
+          BaseButton(
+            height:ManagerHeight.h60,
+          width: ManagerWidth.w250,
+            child: Text(
+                "Login",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: ManagerFontSizes.s20,
+                  fontWeight: ManagerFontWeight.bold,
+                )
+            ),
+          ),
+          SizedBox(height: ManagerHeight.h50,),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0),
             child: Row(
@@ -233,4 +248,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
